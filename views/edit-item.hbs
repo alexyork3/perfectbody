@@ -1,0 +1,37 @@
+<div class="item-offset">
+	    <nav class="nav-for-admin">
+	        <ul>
+	            <li><a href="/admin-panel/delete-post">Видалити статтю</a></li>
+	            <li><a href="/admin-panel/add-post">Додати статтю</a></li>
+	            <li><a href="/admin-panel/edit-post">Редагувати статтю</a></li>
+	            <li><a href="/">На головну</a></li>
+	            <li><a href="/admin-panel">Адмін-панель</a></li>
+	        </ul>
+	    </nav>
+	{{# each items}}
+	<div class="edit-post">
+		<form action="/admin-panel/edit-post/update?post={{this._id}}" method="post">
+		<div class="article-title">
+			<label for="title">Заголовок : </label>
+			<input type="text" id="title" name='title' placeholder="Ваш заголовок" required value=" {{this.title}} "/>
+			</div>
+			<div class="article-image">
+				<label for="image">Обкладинка : </label>
+				<input type="url" id='image' name='image' placeholder="Обкладинки" value='{{this.image}}'>
+			</div>
+			<div class="article-content">
+				<label for="title">Текст : </label>
+				<br>
+				<textarea id="contentEdit" name="content" id='content' placeholder="Ваш текст" required> {{this.content}} </textarea>
+			</div>
+			<div class="article-author">
+				<label for="author">Автор : </label>
+				<input type="text" id="author" name='author' placeholder="Автор" required value=" {{this.author}} ">
+			</div>
+			<div class="article-submit">
+				<button id="sendButton" type="submit">Відправити</button>
+			</div>			
+		</form>
+	</div>
+	{{/each}}
+</div>

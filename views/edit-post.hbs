@@ -1,0 +1,23 @@
+<div class='item-offset'>
+        <nav class="nav-for-admin">
+            <ul>
+                <li><a href="/admin-panel/delete-post">Видалити статтю</a></li>
+                <li><a href="/admin-panel/add-post">Додати статтю</a></li>
+                <li><a href="/admin-panel/edit-post">Редагувати статтю</a></li>
+                <li><a href="/">На головну</a></li>
+                <li><a href="/admin-panel">Адмін-панель</a></li>
+            </ul>
+        </nav>
+    <h1>{{title}}</h1>
+    <div class='content offset-edit'>
+    {{# each items}} 
+    	<div class="item">
+    		<div class="editIcon"><a href="/admin-panel/edit-post/id?post={{this._id}}"><i class="fa fa-pencil fa-2x" aria-hidden="true"></i></a></div>
+    		<div class="title"><a href="/posts/id?post={{this._id}}">{{this.title}}</a></div>
+    		<div class="postContent">{{this.content}}</div>
+    		<div class="author">{{this.author}}</div>
+            <div class="date">{{this.date}}</div>
+    	</div>
+    {{/each}}
+    </div>
+</div>

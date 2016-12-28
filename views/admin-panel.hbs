@@ -1,0 +1,24 @@
+<h1> {{title}} </h1>
+<nav class="admin-nav">
+	<ul>
+		<li><a href="/">Головна</a></li>
+		<li><a href="/admin-panel/delete-post">Видалити Статтю</a></li>
+		<li><a href="/admin-panel/add-post">Додати статтю</a></li>
+		<li><a href="/admin-panel/edit-post">Редагувати статтю</a></li>
+		<li><a href="/admin-panel/settings">Налаштування</a></li>
+		<li><a href="/admin-panel/logout">Вийти</a></li>
+	</ul>
+</nav>
+<!--
+{{#if isAuthenticated }}
+ 	<div>Hello admin</div>
+{{else}}
+	<div>Your ar not Auth</div>
+{{/if}}
+
+-->
+<script>
+	$(document).ready(function () {
+		$('.nav-for-admin').hide();
+	})
+</script>

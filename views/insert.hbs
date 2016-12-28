@@ -1,0 +1,46 @@
+<div class="item-offset">
+    <nav class="nav-for-admin">
+        <ul>
+            <li><a href="/admin-panel/delete-post">Видалити статтю</a></li>
+            <li><a href="/admin-panel/add-post">Додати статтю</a></li>
+            <li><a href="/admin-panel/edit-post">Редагувати статтю</a></li>
+            <li><a href="/">На головну</a></li>
+            <li><a href="/admin-panel">Адмін-панель</a></li>
+        </ul>
+    </nav>
+<h1>{{{title}}}</h1>
+<div class="content add-content">
+	<div class='tabs'>
+		<div class="tabs-inside">
+		<div class="oftab train-tab">Тренировка</div>
+		<div class="oftab article-tab">Стаття</div>
+			<div class="add-article ">
+				<div class="article-title">
+				<form action="/insert" method="post">
+								<input type="text" id="image" name="image">
+						<label for="title">Заголовок : </label>
+						<input type="text" id="title" name='title' placeholder="Ваш заголовок" required />
+				</div>
+				<div class="article-content">
+					<label for="title">Текст : </label>
+					<br>
+					<textarea name="content" id='content' placeholder="Ваш текст" required></textarea>
+				</div>
+				<div class="article-author">
+					<label for="author">Автор : </label>
+					<input type="text" id="author" name='author' placeholder="Автор" required>
+				</div>
+				<div class="article-submit">
+					<button type="submit">Відправити</button>
+				</div>			
+				</form>
+				</div>
+		</div>
+			<div class="add-train">
+				<p>It's future for a next train add insert</p>
+			</div>
+	</div>
+	<div class="images"></div>
+</div>
+<script src="/javascripts/tabs.js"></script>
+</div>

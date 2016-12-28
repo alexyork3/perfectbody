@@ -1,0 +1,60 @@
+<div class="item-offset wrapper-item">
+	{{# each items}}
+	<h1>{{this.title}}</h1>
+	<section>
+		<article>
+			<div class="imageOnPage">
+				<img src="{{this.image}}" alt="Photo not found" style="width: 650px; height: 300px;">
+			</div>
+		</article>
+	</section>
+	<section>
+		<article>
+			<div class="post">
+				{{this.content}}
+			</div>
+		</article>
+	</section>
+	<section>
+		<article>
+			<div class="author">
+				{{this.author}}
+			</div>
+			<div class="date">
+				{{this.date}}
+			</div>
+		</article>
+	</section>
+	{{/each}}
+</div>
+<div class="body-image" id="body-image">
+	
+</div>
+<script>
+	var img = $('img');
+	var button = document.createElement('input');
+	button.type = "button";
+	button.value = 'X';
+	var wrapper = $('.wrapper-item'),
+		bimage = $('#body-image');
+	button.className = "close";
+	img.click(function() {
+		var image = new Image();
+		image.src = this.src;
+		image.width = this.width;
+		image.height = this.height;
+		image.style.cursor = "default";
+		var div = document.createElement('div');
+		div.className = "image-border";
+		div.append(button);
+		div.append(image);
+		$('.body-image').append(div);
+		$('.image-border').css('opacity', 1);
+		wrapper.addClass('blur');
+	})
+	button.addEventListener('click', function () {
+		$('.image-border').remove();
+		wrapper.removeClass('blur')
+	})
+
+</script>

@@ -1,0 +1,39 @@
+<div class="fullImage">
+    <div class="insideFullImage">
+        <div class="image">
+            <img src="/images/bgimage.jpg" alt="BgWallpapper">
+            <span id="logo">Perfect body</span>
+        </div>
+    </div>
+</div>
+<div class="content">
+    <div class="inside-content">
+            {{# each items }}
+                <article class="item">
+                    <div class="title"><a href="/posts/id?post={{this._id}}"> {{ this.title }} </a></div>
+                    <div class="postContent"> {{ this.content }} </div>
+                    {{#if this.image}}
+                    <div class="mainImage">
+                        <a href="/posts/id?post={{this._id}}">
+                            <img src="{{this.image}}" alt="Photo not Found :(( " width="100%">
+                        </a>
+                    </div>
+                    {{/if}}
+                    <div class="author"> Автор : {{ this.author }} </div>
+                    <div class='time'>{{this.date}}</div>
+                </article>
+            {{/each}}
+    </div>
+    <!--div class="ads">
+        Hello from ads
+    </div>
+</div>
+<br>
+<div class="lol">
+    <div class="lil">
+        
+    </div>
+    <div class="lel">
+        
+    </div>
+</div-->
